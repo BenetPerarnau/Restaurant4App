@@ -16,6 +16,7 @@ import com.example.benet.restaurant4app.Utils.AdapterItemList;
 import com.example.benet.restaurant4app.Utils.Constants;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -48,6 +49,11 @@ public class ListFragment extends Fragment implements AdapterView.OnItemClickLis
         AdapterItemList adapter=new AdapterItemList(getActivity(), data, R.layout.item_list);
         lista.setAdapter(adapter);
         lista.setOnItemClickListener(this);
+        if(getActivity().findViewById(R.id.container_mobile)==null){
+            lista.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+            lista.setActivated(true);
+            lista.setItemChecked(0,true);
+        }
     }
 
     // TODO: Rename method, update argument and hook method into UI event

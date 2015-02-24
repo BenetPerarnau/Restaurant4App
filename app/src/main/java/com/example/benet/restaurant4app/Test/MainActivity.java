@@ -95,6 +95,7 @@ public class MainActivity extends ActionBarActivity implements ListFragment.OnFr
         //this.webFragment.setArguments(arg);
         this.webFragment=new WebFragment();
         this.webFragment.setArguments(arg);
+
         if(mobile){
 
             this.fragmentTransaction.replace(R.id.container_mobile, this.webFragment);

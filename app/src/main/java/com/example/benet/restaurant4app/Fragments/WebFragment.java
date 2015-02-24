@@ -37,6 +37,7 @@ public class WebFragment extends Fragment {
         WebView web=(WebView)getActivity().findViewById(R.id.fragment_web);
         
         web.loadUrl(url);
+
         web.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
